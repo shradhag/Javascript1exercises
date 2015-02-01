@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <title>Javascript II</title>
+  <style>
+    div {
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    #text-box-color {
+      background-color: green;
+    }
+
+    #awesome-box {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 72px;
+      position: relative;
+      left: 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="text-box-replace">
+  hello<br/>
+  <a href="text-page" id="get-text">Show me the new text!</a><br/>
+  <script>
+  // Add an event listener and attach it to the "get-text" id.
+  // When the link is clicked:
+  //   Prevent the default action
+  //   Change the content of the "text-box-replace" div to "world"
+  document.getElementbyId("get-text").addEventListener("click", dontClick)
+  
+    function dontClick(evt)
+    {
+    alert("Stop clicking me!");
+    console.log(evt);
+    }
+  )
+  </script>
+</div>
+
+<div id="text-box-color">
+  I am the color green!<br/>
+  <a href="#" id="get-color">Show me the new color!</a><br/>
+  <script>
+  // Add an event listener and attach it to the "get-color" id.
+  // When the link is clicked:
+  //   Prevent the default action
+  //   Change the background color of the "text-box-color" div to red
+  //   Change the content of the "text-box-color" div to "I am the color red!"
+  </script>
+</div>
+
+<div id="melon-box">
+  <img src="http://mda.bigoven.com/pics/rs/256/melon-with-chile-salt-and-lime-3.jpg"/><br/>
+  <a href="#" id="get-melon">Show me the new melon!</a><br/>
+  <!--
+  Add an event listener and attach it to the "get-melon" id.
+  When the link is clicked:
+    Prevent the default action
+    Change the content of the "melon" div to an image of a new melon
+  -->
+</div>

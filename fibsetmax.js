@@ -5,13 +5,19 @@ var maxNumber = function fibSet(max){
         while (n < max){
             fibList.push(n);
             n = ((fibList[fibList.length-1]) + (fibList[fibList.length-2]));
-        console.log(fibList);
+       {
+        for (var i=0; i < fibList.length; i++){
+            if (i % 2 === 0){
+                console.log(i);
+            }
+        }
+       }
     }
    
    }
     else {
-        console.log([1, 1]);
+        console.log("Not even");
     }
-}
+};
 
 
