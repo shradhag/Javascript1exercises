@@ -78,6 +78,14 @@ var page = document.getElementById("get-text");
     Change the content of the "melon" div to an image of a new melon
   -->
 </div>
+  <script>
+  var melon = document.getElementById("get-melon");
+  function changecontent(){
+    // evt.preventDefault();
+    document.getElementById("melon-box").src = "http://www.wzdm.com/wp-content/uploads/2014/08/d0e5Watermelon2.jpg";
+  }
+  melon.addEventListener("click", changecontent);
+</script>
 
 <hr/>
 
