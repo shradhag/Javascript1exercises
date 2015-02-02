@@ -12,6 +12,9 @@ function fibonacci(max){
                         return [1,1];
                     }
                 }
+                var isEven = function(n){
+                    return (n % 2 === 0);
+                };
                 function filter(aFunction,aList){
                     var List2 =[];
                     for (var i=0; i<aList.length; i++){
@@ -21,7 +24,4 @@ function fibonacci(max){
                         }
                     }
                     return List2;
-                }
-                var isEven = function(n){
-                    return (n % 2 === 0);
                 }
