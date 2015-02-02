@@ -7,6 +7,8 @@ function fibSet(max){
             fib_list.push(current_fib);
             current_fib = ((fib_list[(fib_list.length)-1]) + (fib_list[(fib_list.length)-2]));
         }
+    else:
+      return [1,1]
     }
     for (var i=0; i < fib_list.length; i++){
         if (((fib_list[i]) % 2) === 0){
