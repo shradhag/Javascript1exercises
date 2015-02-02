@@ -8,11 +8,9 @@
       padding: 10px;
       margin: 10px;
     }
-
     #text-box-color {
       background-color: green;
     }
-
     #awesome-box {
       text-align: center;
       font-family: sans-serif;
@@ -20,7 +18,6 @@
       position: relative;
       left: 0;
     }
-
     .hidden {
       display: none;
     }
@@ -31,32 +28,44 @@
 <div id="text-box-replace">
   hello<br/>
   <a href="text-page" id="get-text">Show me the new text!</a><br/>
+  <!--
+  Add an event listener and attach it to the "get-text" id.
+  When the link is clicked:
+    Prevent the default action
+    Change the content of the "text-box-replace" div to "world"
+  -->
   <script>
-  // Add an event listener and attach it to the "get-text" id.
-  // When the link is clicked:
-  //   Prevent the default action
-  //   Change the content of the "text-box-replace" div to "world"
-  document.getElementbyId("get-text").addEventListener("click", dontClick)
-  
-    function dontClick(evt)
-    {
-    alert("Stop clicking me!");
-    console.log(evt);
-    }
-  )
-  </script>
+var page = document.getElementById("get-text");
+      function changediv(evt){
+        evt.preventDefault();   
+        var content = document.getElementById("text-box-replace");
+        content.innerHTML= "world";
+      }
+      page.addEventListener("click",changediv);
+    </script>
 </div>
 
 <div id="text-box-color">
   I am the color green!<br/>
   <a href="#" id="get-color">Show me the new color!</a><br/>
+  <!--
+  Add an event listener and attach it to the "get-color" id.
+  When the link is clicked:
+    Prevent the default action
+    Change the background color of the "text-box-color" div to red
+    Change the content of the "text-box-color" div to "I am the color red!"
+  -->
   <script>
-  // Add an event listener and attach it to the "get-color" id.
-  // When the link is clicked:
-  //   Prevent the default action
-  //   Change the background color of the "text-box-color" div to red
-  //   Change the content of the "text-box-color" div to "I am the color red!"
-  </script>
+  var color = document.getElementById("get-color");
+  function changecolor(evt) {
+    evt.preventDefault();
+    var bgcolor = document.getElementById("text-box-color");
+        bgcolor.style.backgroundColor="red";
+        bgcolor.innerHTML ="I am the color red!";
+        
+      }
+      color.addEventListener("click", changecolor)
+</script>
 </div>
 
 <div id="melon-box">
@@ -69,3 +78,28 @@
     Change the content of the "melon" div to an image of a new melon
   -->
 </div>
+
+<hr/>
+
+<a href="#" id="be-awesome">Be Awesome!</a><br/>
+<!--
+The "awesome-box" div below is hidden using a CSS class called "hidden"
+Add an event listener and attach it to the "be-awesome" id.
+When the link is clicked:
+  Prevent the default action
+  Remove the "hidden" class using the toggle function for elem.classList
+Extra Credit 1:
+  Using setTimeout or setInterval, cause the "awesome-box" to toggle its visability once a second
+Extra Credit 2:
+  Using setTimeout or setInterval, cause the "awesome-box" to move across the screen from left to right
+Extra Credit 3:
+  If you complete Extra Credit 2, cause the "awesome-box" to bounce back and forth across the screen
+-->
+
+<span id="awesome-box" class="hidden">AWESOME</span>
+
+<script type="text/javascript">
+</script>
+
+</body>
+</html>
